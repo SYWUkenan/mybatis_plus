@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>01quick_start</module>
+        <module>service_CRUD</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
