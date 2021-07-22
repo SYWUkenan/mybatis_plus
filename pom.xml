@@ -6,6 +6,7 @@
     <modules>
         <module>01quick_start</module>
         <module>service_CRUD</module>
+        <module>03_wrapper</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -57,6 +58,11 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.4.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>p6spy</groupId>
+            <artifactId>p6spy</artifactId>
         </dependency>
 
 
