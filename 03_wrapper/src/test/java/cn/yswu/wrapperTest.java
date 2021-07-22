@@ -63,4 +63,10 @@ public class wrapperTest {
     void logicList(){
         employeesService.list();
     }
+
+
+    @Test
+    void insertAndUpdate(){
+        employeesService.saveOrUpdate(new Employees(3, "yswu", "123@qq.com", 0, 26));
+    }
 }

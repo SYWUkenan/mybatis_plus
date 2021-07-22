@@ -1,9 +1,8 @@
 package cn.yswu.pojo;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+
+import java.util.Date;
 
 /**
  * @author yswu
@@ -22,16 +21,35 @@ public class Employees {
 //    @TableLogic(value = "1",delval = "0")
     private Integer enabled;
 
+    //创建时间：希望在添加数据的时候进行填充
+    @TableField(fill = FieldFill.INSERT)
+    private Date createDate;
+
+    //希望修改的时候对数据进行填充
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private Date modifyDate;
+
+    public Employees(Date createDate) {
+        this.createDate = createDate;
+    }
+
+    public Date getModifyDate() {
+        return modifyDate;
+    }
+
+    public void setModifyDate(Date modifyDate) {
+        this.modifyDate = modifyDate;
+    }
+
     public Employees() {
     }
 
-    public Employees(Integer id, String lastName, String email, Integer gender, Integer age, Integer enabled) {
+    public Employees(Integer id, String lastName, String email, Integer gender, Integer age) {
         this.id = id;
         this.lastName = lastName;
         this.email = email;
         this.gender = gender;
         this.age = age;
-        this.enabled = enabled;
     }
 
     public Integer getId() {

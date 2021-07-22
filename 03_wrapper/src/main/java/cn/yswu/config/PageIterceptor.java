@@ -16,6 +16,7 @@ public class PageIterceptor {
     @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor(){
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
+
         interceptor.addInnerInterceptor(new PaginationInnerInterceptor());
         return interceptor;
     }
