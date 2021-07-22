@@ -2,6 +2,7 @@ package cn.yswu.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 /**
@@ -18,15 +19,19 @@ public class Employees {
     private Integer gender;
     private Integer age;
 
+//    @TableLogic(value = "1",delval = "0")
+    private Integer enabled;
+
     public Employees() {
     }
 
-    public Employees(Integer id, String lastName, String email, Integer gender, Integer age) {
+    public Employees(Integer id, String lastName, String email, Integer gender, Integer age, Integer enabled) {
         this.id = id;
         this.lastName = lastName;
         this.email = email;
         this.gender = gender;
         this.age = age;
+        this.enabled = enabled;
     }
 
     public Integer getId() {
@@ -41,7 +46,7 @@ public class Employees {
         return lastName;
     }
 
-    public void setLastname(String lastName) {
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
@@ -69,14 +74,23 @@ public class Employees {
         this.age = age;
     }
 
+    public Integer getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(Integer enabled) {
+        this.enabled = enabled;
+    }
+
     @Override
     public String toString() {
         return "Employees{" +
                 "id=" + id +
-                ", lastname='" + lastName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", gender=" + gender +
                 ", age=" + age +
+                ", enabled=" + enabled +
                 '}';
     }
 }

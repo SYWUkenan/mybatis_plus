@@ -10,3 +10,9 @@ logging:
     root: info
     cn.yswu: debug
 
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: enabled
+      logic-not-delete-value: 1 #未删除数据
+      logic-delete-value: 0  #已删除数据

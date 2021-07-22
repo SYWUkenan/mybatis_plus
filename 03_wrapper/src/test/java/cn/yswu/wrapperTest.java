@@ -53,4 +53,14 @@ public class wrapperTest {
 
         employeesService.update(updateWrapper);
     }
+
+    @Test
+    void logicDelete(){
+        employeesService.removeById(4);
+    }
+
+    @Test
+    void logicList(){
+        employeesService.list();
+    }
 }
