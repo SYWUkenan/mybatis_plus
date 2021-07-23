@@ -7,6 +7,7 @@
         <module>01quick_start</module>
         <module>service_CRUD</module>
         <module>03_wrapper</module>
+        <module>04generator</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -59,12 +60,6 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.4.2</version>
         </dependency>
-
-        <dependency>
-            <groupId>p6spy</groupId>
-            <artifactId>p6spy</artifactId>
-        </dependency>
-
 
     </dependencies>
 
